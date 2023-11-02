@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:jeilowin/config/router/app__router.dart';
 import 'package:jeilowin/config/theme/app_theme.dart';
-import 'package:jeilowin/presentation/screens/home/home_screen.dart';
 
 void main() {
   runApp(const MainApp());
@@ -12,10 +12,11 @@ class MainApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return MaterialApp.router(
       debugShowCheckedModeBanner: false,
       theme: AppTheme(selectedColor: 3).theme(),
-      home:  const HomeScreen(),
+      
+      routerConfig: appRouter,
       );
     }
   }
