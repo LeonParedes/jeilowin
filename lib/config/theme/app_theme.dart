@@ -17,7 +17,8 @@ import 'package:flutter/material.dart';
        AppTheme({this.selectedColor = 0})
         : assert(selectedColor >= 0 && selectedColor < _customThemes.length, 
           "Solo se encuentran colores en un rango de 0 a ${_customThemes.length}");
-          ThemeData theme (){
+      
+      ThemeData theme (){
             return ThemeData(
               useMaterial3: true,
               colorSchemeSeed: _customThemes[selectedColor],
