@@ -43,7 +43,7 @@ class _CustomListTitle extends StatelessWidget {
       onTap: () {
         //context.go(menuItem.link);
         //context.push(menuItem.link);
-        context.pushNamed(menuItem.screenName);
+        context.pushNamed(menuItem.link);
       },
     );
   }

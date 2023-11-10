@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-const cards = <Map<String, dynamic>[
+const cards = <Map<String, dynamic>>[
   {'elevation': 0.0,'label':'Elevation 0'},
   {'elevation': 1.0,'label':'Elevation 1'},
   {'elevation': 2.0,'label':'Elevation 2'},
