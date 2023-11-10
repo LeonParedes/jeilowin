@@ -28,6 +28,6 @@ final GoRouter appRouter = GoRouter(
       builder: (BuildContext context, GoRouterState state) =>
           const ProgressScreen(),
           ), 
-      ),
+      
   ],
 );
