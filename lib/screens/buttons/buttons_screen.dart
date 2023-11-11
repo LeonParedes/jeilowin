@@ -1,7 +1,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:jeilowin/widgets/custom_button.dart';
+import 'package:jeilowin/widgets/buttons/custom_button.dart';
 
 class ButtonsScreen extends StatelessWidget {
   static const String screenName = 'button_screen';

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+presentation/widgets/appBars/app_bar_custom.dart';
 
 class AppTutorialScreen extends StatelessWidget {
   static const name = 'tutorial_screen';
