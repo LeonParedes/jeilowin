@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:jeilowin/presentation/providers/theme_provider.dart';
-import 'package:jeilowin/config/theme/app_theme.dart';
+
 import 'package:jeilowin/presentation/providers/theme_provider.dart';
 
 
