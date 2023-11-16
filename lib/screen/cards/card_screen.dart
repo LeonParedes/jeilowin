@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '/../presentation/widgets/appBars/app_bar_custom.dart';
 
 const cards = <Map<String, dynamic>>[
   {'elevation': 0.0, 'label': 'Elevation 0'},
@@ -9,16 +10,14 @@ const cards = <Map<String, dynamic>>[
   {'elevation': 5.0, 'label': 'Elevation 5'},
 ];
 
-class CardsScreen extends StatelessWidget {
+class CardsScreen extends StatelessWidget  with AppBarCustom {
   static const String screenName = 'card_screen';
   const CardsScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('Cards Screen'),
-      ),
+      appBar:appBarWithOutReturnButton(title: screenName),
       body: SingleChildScrollView(
         child: Column(
           children: [
@@ -48,7 +47,7 @@ class _CardType1 extends StatelessWidget {
   @override
   Widget build(BuildContext context) => Card(
         elevation: elevation,
-        color: Colors.amber,
+        color: Colors.pink,
         child: Padding(
           padding: const EdgeInsets.fromLTRB(10, 5, 10, 10),
           child: Column(
@@ -78,7 +77,7 @@ class _CardType2 extends StatelessWidget {
     final colors = Theme.of(context).colorScheme;
     return Card(
       elevation: elevation,
-      color: Colors.amber,
+      color: Colors.teal,
       shape: RoundedRectangleBorder(
           side: BorderSide(color: colors.outline),
           borderRadius: const BorderRadius.all(Radius.circular(15))),
@@ -111,7 +110,7 @@ class _CardType3 extends StatelessWidget {
   Widget build(BuildContext context) {
     //final colors = Theme.of(context).colorScheme;
     return Card(
-      color: Colors.amber,
+      color: Colors.teal,
       elevation: elevation,
       child: Padding(
         padding: const EdgeInsets.fromLTRB(10, 5, 10, 10),
@@ -180,7 +179,7 @@ class _CardType5 extends StatelessWidget {
               alignment: Alignment.topRight,
               child: Container(
                 decoration: const BoxDecoration(
-                    color: Colors.yellow,
+                    color: Colors.white,
                     borderRadius:
                         BorderRadius.only(bottomLeft: Radius.circular(20))),
                 child: IconButton(

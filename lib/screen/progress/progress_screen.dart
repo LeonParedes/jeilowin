@@ -1,16 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:jeilowin/presentation/widgets/appBars/app_bar_custom.dart';
 
-class ProgressScreen extends StatelessWidget {
+class ProgressScreen extends StatelessWidget with AppBarCustom {
   static const screenName = 'progress_screen';
   const ProgressScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(
-          backgroundColor: Colors.blue,
-          title: const Text('Progress Indicators'),
-        ),
+       appBar:appBarWithOutReturnButton(title: screenName),
         body: const _ProgressView());
   }
 }
@@ -68,7 +66,7 @@ class _ControllersProgressIndicator extends StatelessWidget {
                 //linea de carga
 
                 child: LinearProgressIndicator(
-              color: Colors.orange,
+              color: Colors.teal,
               value: progressValue,
             )),
           ],

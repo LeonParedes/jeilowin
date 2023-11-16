@@ -12,10 +12,10 @@ class SnackBarScreen extends StatelessWidget
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: appBarWithReturnButton(title: 'Snackbars y Diálogos'),
+      appBar: appBarWithOutReturnButton(title: screenName),
       floatingActionButton: FloatingActionButton.extended(
           onPressed: () => toShowSnackBarCustom(context,
-              snackBarContent: const Text('Hola itzel')),
+              snackBarContent: const Text('Jaguar u Leo')),
           label: const Text('Mostrar SnackBar'),
           icon: const Icon(Icons.remove_red_eye_outlined)),
       body: const Center(child: _ShowButtonsList()),

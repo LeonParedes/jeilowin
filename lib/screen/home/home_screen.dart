@@ -1,19 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'package:jeilowin/presentation/widgets/appBars/app_bar_custom.dart';
 
 import '../../config/menu/menu_items.dart';
 
-class HomeScreen extends StatelessWidget {
+class HomeScreen extends StatelessWidget with AppBarCustom {
   static const String screenName = 'home_screen';
   const HomeScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(
-          backgroundColor: Colors.cyan,
-          title: const Text('Menu de materia Unidad 3 '),
-        ),
+       appBar:appBarWithOutReturnButton(title: screenName),
         body: const _HomeView());
   }
 }
