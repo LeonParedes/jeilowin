@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'package:jeilowin/screen/counter/counter_screen.dart';
+import 'package:jeilowin/screen/theme_changer/theme_changer.dart';
 import '/../screen/screens.dart';
 import '/../../screen/ui_controls/ui_controls_screen.dart';
 
@@ -52,5 +54,15 @@ final List<RouteBase> routes = [
     path: '/infinite',
     name: InfiniteScrollScreen.screenName,
     builder: (context, state) => const InfiniteScrollScreen(),
+  ),
+  GoRoute(
+    path: '/counter-river',
+    name: CounterScreen.name,
+    builder: (context, state) => const CounterScreen(),
+  ),
+  GoRoute(
+    path: '/theme-changer',
+    name: ThemeChangerScreen.name,
+    builder: (context, state) => const ThemeChangerScreen(),
   ),
 ];

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-    const Color _customColor = Colors.purple;
-    const List<Color> _customThemes = [
-      _customColor, 
+    const Color customColor = Colors.purple;
+    const List<Color> customThemes = [
+      customColor, 
       Colors.blue,
       Colors.cyan,
       Colors.teal,
@@ -12,15 +12,17 @@ import 'package:flutter/material.dart';
     ];
     class AppTheme {
        final int selectedColor;
-       AppTheme({this.selectedColor = 0})
-        : assert(selectedColor >= 0 && selectedColor < _customThemes.length, 
-          "Solo se encuentran colores en un rango de 0 a ${_customThemes.length}");
-      
-      ThemeData theme (){
-            return ThemeData(
-              useMaterial3: true,
-              colorSchemeSeed: _customThemes[selectedColor],
-              appBarTheme: const AppBarTheme(centerTitle: true)
-            );
-          }
-    }
+       final bool isDarkMode;
+       AppTheme({
+    this.selectedColor = 0,
+    this.isDarkMode = true,
+  }) : assert(selectedColor >= 0 && selectedColor < customThemes.length,
+            'La selección de color no cumple con el rango de 0 asta ${customThemes.length - 1}');
+
+
+      ThemeData tema ()
+            => ThemeData(   useMaterial3: true,
+      brightness: isDarkMode ? Brightness.dark : Brightness.light,
+      colorSchemeSeed: customThemes[selectedColor],
+      appBarTheme: const AppBarTheme(centerTitle: false));
+      } 
