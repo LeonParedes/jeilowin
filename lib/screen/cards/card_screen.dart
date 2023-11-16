@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:widgets_app/presentation/widgets/appBars/app_bar_custom.dart';
 
 const cards = <Map<String, dynamic>>[
   {'elevation': 0.0, 'label': 'Elevation 0'},
@@ -10,14 +9,16 @@ const cards = <Map<String, dynamic>>[
   {'elevation': 5.0, 'label': 'Elevation 5'},
 ];
 
-class CardsScreen extends StatelessWidget with AppBarCustom {
+class CardsScreen extends StatelessWidget {
   static const String screenName = 'card_screen';
   const CardsScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: appBarWithReturnButton(title: 'Cards Screen'),
+      appBar: AppBar(
+        title: const Text('Cards Screen'),
+      ),
       body: SingleChildScrollView(
         child: Column(
           children: [
@@ -47,6 +48,7 @@ class _CardType1 extends StatelessWidget {
   @override
   Widget build(BuildContext context) => Card(
         elevation: elevation,
+        color: Colors.amber,
         child: Padding(
           padding: const EdgeInsets.fromLTRB(10, 5, 10, 10),
           child: Column(
@@ -76,6 +78,7 @@ class _CardType2 extends StatelessWidget {
     final colors = Theme.of(context).colorScheme;
     return Card(
       elevation: elevation,
+      color: Colors.amber,
       shape: RoundedRectangleBorder(
           side: BorderSide(color: colors.outline),
           borderRadius: const BorderRadius.all(Radius.circular(15))),
@@ -106,9 +109,9 @@ class _CardType3 extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final colors = Theme.of(context).colorScheme;
+    //final colors = Theme.of(context).colorScheme;
     return Card(
-      color: colors.surfaceVariant,
+      color: Colors.amber,
       elevation: elevation,
       child: Padding(
         padding: const EdgeInsets.fromLTRB(10, 5, 10, 10),
@@ -177,7 +180,7 @@ class _CardType5 extends StatelessWidget {
               alignment: Alignment.topRight,
               child: Container(
                 decoration: const BoxDecoration(
-                    color: Colors.white,
+                    color: Colors.yellow,
                     borderRadius:
                         BorderRadius.only(bottomLeft: Radius.circular(20))),
                 child: IconButton(
